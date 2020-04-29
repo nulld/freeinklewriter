@@ -15,11 +15,11 @@ services:
   app:
     env_file: .env
     build: .
-    image: albancrommer/inklewriter:latest
+    image: docker.pkg.github.com/nulld/freeinklewriter/inklewriter:latest
     volumes:
         - .:/usr/src/app
     ports:
-      - "3000:3000"
+      - "80:3000"
     depends_on:
       - db
   
